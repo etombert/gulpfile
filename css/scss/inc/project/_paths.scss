@@ -1,0 +1,146 @@
+$path-site: '../';
+
+$path-assets: '#{$path-site}css/';
+
+$path-fonts: '#{$path-site}fonts/';
+
+$path-images: '#{$path-assets}images/';
+
+
+
+// COLORS
+$back: #e5e5e5;
+$sail: rgba(47, 47, 54, 0.65);
+
+$indigo: #5d40cf;
+$blue: #89a2dd;
+$green1: #79e446;
+$green2: #b5de31;
+$yellow: #ffde43;
+$orange: #fa9727;
+$red: #e43b2e;
+$violet: #922f9d;
+$purple: #b571bd;
+$darkest: #2f2f36;
+$gray-dark: #3d3d45;
+$gray-med: #838291;
+$gray-light: #C5C5CD;
+$lightest: #F4F4F7;
+$white: #ffffff;
+$sky-blue: #48b1e6;
+
+
+/**
+*
+*	mixins
+*
+*/
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%,-50%));
+}
+
+
+@mixin gradient($startColor: #eee, $endColor: white)
+{
+  background-color: $startColor;
+  background: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+  background: -webkit-linear-gradient(top, $startColor, $endColor);
+  background: -moz-linear-gradient(top, $startColor, $endColor);
+  background: -ms-linear-gradient(top, $startColor, $endColor);
+  background: -o-linear-gradient(top, $startColor, $endColor);
+  background: linear-gradient(top, $startColor, $endColor);
+}
+@mixin horizontal-gradient($startColor: #eee, $endColor: white)
+{
+  background-color: $startColor;
+  background-image: -webkit-gradient(linear, left top, right top, from($startColor), to($endColor));
+  background-image: -webkit-linear-gradient(left, $startColor, $endColor);
+  background-image: -moz-linear-gradient(left, $startColor, $endColor);
+  background-image: -ms-linear-gradient(left, $startColor, $endColor);
+  background-image: -o-linear-gradient(left, $startColor, $endColor);
+  background-image: linear-gradient(left, $startColor, $endColor);
+}
+
+@mixin animation($name, $duration: 300ms, $delay: 0.5s, $ease: ease)
+{
+  -webkit-animation: $name $duration $delay $ease;
+  -moz-animation:    $name $duration $delay $ease;
+  -ms-animation:     $name $duration $delay $ease;
+  animation:     $name $duration $delay $ease;
+}
+
+@mixin transition($transition)
+{
+  -webkit-transition: $transition;
+  -moz-transition:    $transition;
+  -ms-transition:     $transition;
+  -o-transition:      $transition;
+  transition:      $transition;
+}
+@mixin transform($string)
+{
+  -webkit-transform: $string;
+  -moz-transform: 	 $string;
+  -ms-transform: 		 $string;
+  -o-transform: 		 $string;
+  transform: 		 $string;
+}
+@mixin scale($factor)
+{
+  -webkit-transform: scale($factor);
+  -moz-transform: 	 scale($factor);
+  -ms-transform: 		 scale($factor);
+  -o-transform: 		 scale($factor);
+  transform: 		 scale($factor);
+}
+@mixin rotate($deg)
+{
+  -webkit-transform: rotate($deg);
+  -moz-transform: 	 rotate($deg);
+  -ms-transform: 		 rotate($deg);
+  -o-transform: 		 rotate($deg);
+  transform: 		 rotate($deg);
+}
+@mixin skew($deg, $deg2)
+{
+  -webkit-transform:       skew($deg, $deg2);
+  -moz-transform: 	 skew($deg, $deg2);
+  -ms-transform: 		 skew($deg, $deg2);
+  -o-transform: 		 skew($deg, $deg2);
+  transform: 		 skew($deg, $deg2);
+}
+@mixin translate($x, $y:0)
+{
+  -webkit-transform:       translate($x, $y);
+  -moz-transform: 	 translate($x, $y);
+  -ms-transform: 		 translate($x, $y);
+  -o-transform: 		 translate($x, $y);
+  transform: 		 translate($x, $y);
+}
+@mixin translate3d($x, $y: 0, $z: 0)
+{
+  -webkit-transform:       translate3d($x, $y, $z);
+  -moz-transform: 	 translate3d($x, $y, $z);
+  -ms-transform: 		 translate3d($x, $y, $z);
+  -o-transform: 		 translate3d($x, $y, $z);
+  transform: 		 translate3d($x, $y, $z);
+}
+@mixin perspective($value: 1000)
+{
+  -webkit-perspective: 	$value;
+  -moz-perspective: 	$value;
+  -ms-perspective: 	$value;
+  perspective: 		$value;
+}
+@mixin transform-origin($x:center, $y:center)
+{
+  -webkit-transform-origin: $x $y;
+  -moz-transform-origin:    $x $y;
+  -ms-transform-origin:     $x $y;
+  -o-transform-origin:      $x $y;
+  transform-origin:      $x $y;
+}

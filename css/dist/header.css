@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/* # Imports nécessaires à la bibliothèque */
+/**
+ * Computes a top-shadow for a card effect.
+ *
+ * @param {Number} $depth - depth level
+ *
+ * @return {List}
+ */
+/**
+ * Computes a bottom-shadow for a card effect.
+ *
+ * @param {Number} $depth - depth level
+ *
+ * @return {List}
+ */
+/* Letter spacing is simpler.. stolen from somewhere */
+/* font-size to rem with backup, stolen from somewhere */
+/**
+ * Gives a card depth effect.
+ *
+ * @param {Number} $depth - depth level (between 1 and 5)
+ *
+ * @link http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality Google Design
+ *
+ * @requires {function} top-shadow
+ * @requires {function} bottom-shadow
+ */
+/**
+*
+*	mixins
+*
+*/
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+@font-face {
+  font-family: "FuturaPTBold";
+  src: url("../fonts/FuturaPTBold.otf") format("opentype"), url("../fonts/FuturaPTBold.eot?") format("eot"), url("../fonts/FuturaPTBold.ttf") format("truetype"), url("../fonts/FuturaPTBold.woff") format("woff"), url("../fonts/FuturaPTBold.svg#FuturaPTBold") format("svg"); }
+
+@font-face {
+  font-family: "FuturaPTBook";
+  src: url("../fonts/FuturaPTBook.otf") format("opentype"), url("../fonts/FuturaPTBook.eot?") format("eot"), url("../fonts/FuturaPTBook.ttf") format("truetype"), url("../fonts/FuturaPTBook.woff") format("woff"), url("../fonts/FuturaPTBook.svg#FuturaPTBook") format("svg"); }
+
+@font-face {
+  font-family: "FuturaPTDemi";
+  src: url("../fonts/FuturaPTDemi.otf") format("opentype"), url("../fonts/FuturaPTDemi.eot?") format("eot"), url("../fonts/FuturaPTDemi.ttf") format("truetype"), url("../fonts/FuturaPTDemi.woff") format("woff"), url("../fonts/FuturaPTDemi.svg#FuturaPTDemi") format("svg"); }
+
+@font-face {
+  font-family: "FuturaPTHeavy";
+  src: url("../fonts/FuturaPTHeavy.otf") format("opentype"), url("../fonts/FuturaPTHeavy.eot?") format("eot"), url("../fonts/FuturaPTHeavy.ttf") format("truetype"), url("../fonts/FuturaPTHeavy.woff") format("woff"), url("../fonts/FuturaPTHeavy.svg#FuturaPTHeavy") format("svg"); }
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body {
+  font-family: "Roboto", "Sans-serif"; }
+  @media (max-width: 991px) {
+    html, body {
+      height: 100%; } }
+  @media (max-width: 700px) {
+    html, body {
+      height: 100%; } }
+
+body {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  font-smooth: always;
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+  position: relative; }
+
+a:hover, a:focus {
+  text-decoration: none; }
+
+header {
+  background: #171717;
+  font-family: FuturaPTBold, "Arial", "Sans-serif"; }
+  header .header-top {
+    display: flex;
+    max-width: 1080px;
+    width: 100%;
+    margin: auto;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center; }
+    header .header-top .header-left {
+      padding-left: 40px; }
+      header .header-top .header-left ul {
+        display: flex; }
+        header .header-top .header-left ul li {
+          margin-right: 40px; }
+          header .header-top .header-left ul li a {
+            font-family: FuturaPTBold, "Arial", "Sans-serif";
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 14px; }
+    header .header-top .header-central a img {
+      width: 230px; }
+    header .header-top .header-right {
+      padding-right: 40px; }
+      header .header-top .header-right ul {
+        display: flex; }
+        header .header-top .header-right ul li {
+          margin-left: 40px; }
+          header .header-top .header-right ul li a {
+            font-family: FuturaPTBold, "Arial", "Sans-serif";
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 14px; }
+  header .header-bottom {
+    border-top: 1px solid #272727;
+    height: 50px; }
+    header .header-bottom ul {
+      display: flex;
+      max-width: 1080px;
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      align-items: center;
+      justify-content: center; }
+      header .header-bottom ul li {
+        margin-right: 20px; }
+        header .header-bottom ul li.red-promos a {
+          color: #f72d2d; }
+        header .header-bottom ul li a {
+          font-family: FuturaPTBold, "Arial", "Sans-serif";
+          color: #fff;
+          text-transform: uppercase;
+          text-decoration: none;
+          font-size: 14px; }
+
+/*@import "inc/project/views/jasny/build/jasny-bootstrap";*/

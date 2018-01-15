@@ -1,0 +1,18 @@
+//@include font-face(FontAwesome, '#{$path-fonts}FontAwesome', null, null, eot woff2 woff ttf svg);
+//@include font-face(icons, '#{$path-fonts}icons', null, null, eot ttf woff svg);
+@include font-face(FuturaPTBold, '#{$path-fonts}FuturaPTBold', null, null, otf eot ttf woff svg);
+@include font-face(FuturaPTBook, '#{$path-fonts}FuturaPTBook', null, null, otf eot ttf woff svg);
+@include font-face(FuturaPTDemi, '#{$path-fonts}FuturaPTDemi', null, null, otf eot ttf woff svg);
+@include font-face(FuturaPTHeavy, '#{$path-fonts}FuturaPTHeavy', null, null, otf eot ttf woff svg);
+
+//$font-text-icons: "icons", 'Arial', 'Sans-serif';
+//$font-text-social: 'FontAwesome', 'Arial', 'Sans-serif';
+$font-roboto: 'Roboto', 'Sans-serif';
+$futura-bold: FuturaPTBold, 'Arial', 'Sans-serif';
+$futura-book: FuturaPTBook, 'Arial', 'Sans-serif';
+$futura-demi: FuturaPTDemi, 'Arial', 'Sans-serif';
+$futura-heavy: FuturaPTHeavy, 'Arial', 'Sans-serif';
+
+
+$size-text: 14px;
+$size-titre: 24px;

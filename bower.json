@@ -1,0 +1,21 @@
+{
+  "name": "APEC",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Subskill Digital"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "gsap": "^1.18.2",
+    "slick-carousel": "^1.6.0"
+  }
+}

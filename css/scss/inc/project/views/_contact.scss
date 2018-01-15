@@ -1,0 +1,310 @@
+.contact-container {
+  display: flex;
+  align-items: flex-start;
+
+  .contact-bloc_1 {
+    position: relative;
+    background: url(../../img/contact.jpg) no-repeat fixed;
+    width: 35%;
+    height: 100vh;
+    padding: 70px 0px;
+  }
+
+  .contact-bloc_2 {
+    position: relative;
+    width: 65%;
+    height: 100vh;
+    background: #f3f3f3;
+
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 0;
+  }
+
+
+  .fields {
+    display: flex;
+    padding: 30px 0;
+  }
+
+  .field {
+    width: 100%;
+  }
+
+  .textarea {
+    margin-top: 30px;
+  }
+
+  .coordonnees {
+    padding: 50px 0;
+  }
+
+  .select {
+    padding-bottom: 15px;
+  }
+
+  .name-email {
+    input {
+      max-width: 310px;
+    }
+  }
+
+  form {
+    // @extend .center;
+    width: 100%;
+    max-width: 700px;
+    padding: 0 50px;
+  }
+
+  span {
+    font-size: 12px;
+    display: block;
+    font-family: $futura-book;
+    // padding-top: 5px;
+  }
+
+  select {
+    -webkit-appearance: none;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #b4b4b4;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    outline: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    background: transparent url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right center;
+    background-size: 12px;
+
+  }
+
+  .option {
+    font-size: 10px;
+  }
+
+  optgroup {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 45pt;
+    font-family: $futura-bold;
+    text-transform: uppercase;
+  }
+
+  label {
+    display: block;
+    font-family: $futura-bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: $futura-book;
+  }
+
+  input {
+    border: none;
+    background: none;
+    border-bottom: 2px solid #b4b4b4;
+    width: 100%;
+    outline: none;
+    padding-bottom: 10px;
+  }
+
+  input[type="file"] {
+    background: transparent url(https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/add-128.png) no-repeat right center;
+    background-size: 12px;
+    max-width: 250px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 82px;
+      height: 18px;
+      background: #f3f3f3;
+    }
+  }
+
+
+  textarea {
+    border: none;
+    background: none;
+    border-bottom: 2px solid #b4b4b4;
+    width: 100%;
+    outline: none;
+  }
+
+}
+
+
+.sav-container {
+  background: #dadada;
+
+  .sav-content {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    flex-wrap: wrap;
+
+    .items {
+      margin: 30px 0;
+
+      h3 {
+        font-family: $futura-bold;
+        text-transform: uppercase;
+        padding: 10px 0;
+        font-size: 13px;
+      }
+
+      p {
+        font-size: 13px;
+        font-family: $futura-book;
+      }
+
+      img {
+        width: 20px;
+      }
+    }
+  }
+
+}
+
+
+.section-newsletter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .news-bloc_1 {
+    padding: 25px;
+
+    p {
+      font-family: $futura-bold;
+      text-transform: uppercase;
+      width: 100%;
+      max-width: 280px;
+      font-size: 23px;
+      line-height: 1.1;
+    }
+  }
+
+  .news-bloc_2 {
+    width: 100%;
+    max-width: 350px;
+    padding: 25px;
+
+    label {
+      display: block;
+      font-family: $futura-bold;
+      text-transform: uppercase;
+    }
+
+    .field {
+      display: flex;
+    }
+
+    button {
+      background: #f72d2d;
+      padding: 15px 20px;
+      transform: skew(-10deg);
+      position: relative;
+      display: table;
+      -webkit-transition: background 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      -moz-transition: background 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      -o-transition: background 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      -ms-transition: background 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition: background 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      border: none;
+      color: white;
+    }
+
+    input {
+      border: none;
+      background: none;
+      border-bottom: 2px solid #b4b4b4;
+      outline: none;
+      padding: 10px 0 5px;
+      width: 100%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    .contact-bloc_1 {
+      display: none;
+    }
+    .contact-bloc_2 {
+      width: 100%;
+    }
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+
+
+footer {
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 50px 0;
+
+  .items {
+    padding: 30px 0;
+
+    &:nth-child(1) {
+
+      .span {
+          padding: 15px 0 50px;
+          display: flex;
+      }
+
+      img:first-child {
+        width: 100%;
+        max-width: 200px;
+      }
+    }
+  }
+
+  span {
+    font-family: $futura-bold;
+  }
+
+  h3 {
+    font-family: $futura-bold;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  ul {
+    li {
+      padding: 2.5px 0;
+      a {
+        color: #a3a3a3;
+        text-decoration: none;
+        font-family: $futura-book;
+      }
+    }
+  }
+
+}

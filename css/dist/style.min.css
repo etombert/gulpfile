@@ -1,0 +1,842 @@
+@charset "UTF-8";
+/* # Imports nécessaires à la bibliothèque */
+/**
+ * Computes a top-shadow for a card effect.
+ *
+ * @param {Number} $depth - depth level
+ *
+ * @return {List}
+ */
+/**
+ * Computes a bottom-shadow for a card effect.
+ *
+ * @param {Number} $depth - depth level
+ *
+ * @return {List}
+ */
+/* Letter spacing is simpler.. stolen from somewhere */
+/* font-size to rem with backup, stolen from somewhere */
+/**
+ * Gives a card depth effect.
+ *
+ * @param {Number} $depth - depth level (between 1 and 5)
+ *
+ * @link http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality Google Design
+ *
+ * @requires {function} top-shadow
+ * @requires {function} bottom-shadow
+ */
+/**
+*
+*	mixins
+*
+*/
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+@font-face {
+  font-family: "FuturaPTBold";
+  src: url("../fonts/FuturaPTBold.otf") format("opentype"), url("../fonts/FuturaPTBold.eot?") format("eot"), url("../fonts/FuturaPTBold.ttf") format("truetype"), url("../fonts/FuturaPTBold.woff") format("woff"), url("../fonts/FuturaPTBold.svg#FuturaPTBold") format("svg"); }
+
+@font-face {
+  font-family: "FuturaPTBook";
+  src: url("../fonts/FuturaPTBook.otf") format("opentype"), url("../fonts/FuturaPTBook.eot?") format("eot"), url("../fonts/FuturaPTBook.ttf") format("truetype"), url("../fonts/FuturaPTBook.woff") format("woff"), url("../fonts/FuturaPTBook.svg#FuturaPTBook") format("svg"); }
+
+@font-face {
+  font-family: "FuturaPTDemi";
+  src: url("../fonts/FuturaPTDemi.otf") format("opentype"), url("../fonts/FuturaPTDemi.eot?") format("eot"), url("../fonts/FuturaPTDemi.ttf") format("truetype"), url("../fonts/FuturaPTDemi.woff") format("woff"), url("../fonts/FuturaPTDemi.svg#FuturaPTDemi") format("svg"); }
+
+@font-face {
+  font-family: "FuturaPTHeavy";
+  src: url("../fonts/FuturaPTHeavy.otf") format("opentype"), url("../fonts/FuturaPTHeavy.eot?") format("eot"), url("../fonts/FuturaPTHeavy.ttf") format("truetype"), url("../fonts/FuturaPTHeavy.woff") format("woff"), url("../fonts/FuturaPTHeavy.svg#FuturaPTHeavy") format("svg"); }
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body {
+  font-family: "Roboto", "Sans-serif"; }
+  @media (max-width: 991px) {
+    html, body {
+      height: 100%; } }
+  @media (max-width: 700px) {
+    html, body {
+      height: 100%; } }
+
+body {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  font-smooth: always;
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+  position: relative; }
+
+a:hover, a:focus {
+  text-decoration: none; }
+
+/* # Imports nécessaires à la bibliothèque */
+/**
+ * Computes a top-shadow for a card effect.
+ *
+ * @param {Number} $depth - depth level
+ *
+ * @return {List}
+ */
+/**
+ * Computes a bottom-shadow for a card effect.
+ *
+ * @param {Number} $depth - depth level
+ *
+ * @return {List}
+ */
+/* Letter spacing is simpler.. stolen from somewhere */
+/* font-size to rem with backup, stolen from somewhere */
+/**
+ * Gives a card depth effect.
+ *
+ * @param {Number} $depth - depth level (between 1 and 5)
+ *
+ * @link http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality Google Design
+ *
+ * @requires {function} top-shadow
+ * @requires {function} bottom-shadow
+ */
+/* # Imports projet */
+/*
+Cette découpe est seulement initiée ; il reste possible d’ajouter des composants.
+*/
+/**
+*
+*	mixins
+*
+*/
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+@font-face {
+  font-family: "FuturaPTBold";
+  src: url("../fonts/FuturaPTBold.otf") format("opentype"), url("../fonts/FuturaPTBold.eot?") format("eot"), url("../fonts/FuturaPTBold.ttf") format("truetype"), url("../fonts/FuturaPTBold.woff") format("woff"), url("../fonts/FuturaPTBold.svg#FuturaPTBold") format("svg"); }
+
+@font-face {
+  font-family: "FuturaPTBook";
+  src: url("../fonts/FuturaPTBook.otf") format("opentype"), url("../fonts/FuturaPTBook.eot?") format("eot"), url("../fonts/FuturaPTBook.ttf") format("truetype"), url("../fonts/FuturaPTBook.woff") format("woff"), url("../fonts/FuturaPTBook.svg#FuturaPTBook") format("svg"); }
+
+@font-face {
+  font-family: "FuturaPTDemi";
+  src: url("../fonts/FuturaPTDemi.otf") format("opentype"), url("../fonts/FuturaPTDemi.eot?") format("eot"), url("../fonts/FuturaPTDemi.ttf") format("truetype"), url("../fonts/FuturaPTDemi.woff") format("woff"), url("../fonts/FuturaPTDemi.svg#FuturaPTDemi") format("svg"); }
+
+@font-face {
+  font-family: "FuturaPTHeavy";
+  src: url("../fonts/FuturaPTHeavy.otf") format("opentype"), url("../fonts/FuturaPTHeavy.eot?") format("eot"), url("../fonts/FuturaPTHeavy.ttf") format("truetype"), url("../fonts/FuturaPTHeavy.woff") format("woff"), url("../fonts/FuturaPTHeavy.svg#FuturaPTHeavy") format("svg"); }
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body {
+  font-family: "Roboto", "Sans-serif"; }
+  @media (max-width: 991px) {
+    html, body {
+      height: 100%; } }
+  @media (max-width: 700px) {
+    html, body {
+      height: 100%; } }
+
+body {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  font-smooth: always;
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+  position: relative; }
+
+a:hover, a:focus {
+  text-decoration: none; }
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0; }
+  .slick-list:focus {
+    outline: none; }
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block; }
+  .slick-track:before, .slick-track:after {
+    content: "";
+    display: table; }
+  .slick-track:after {
+    clear: both; }
+  .slick-loading .slick-track {
+    visibility: hidden; }
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none; }
+  [dir="rtl"] .slick-slide {
+    float: right; }
+  .slick-slide img {
+    display: block; }
+  .slick-slide.slick-loading img {
+    display: none; }
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  .slick-initialized .slick-slide {
+    display: block; }
+  .slick-loading .slick-slide {
+    visibility: hidden; }
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
+/* Slider */
+.slick-loading .slick-list {
+  background: #fff url("./ajax-loader.gif") center center no-repeat; }
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url("./fonts/slick.eot");
+  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  border: 2px solid #0c1b47;
+  background-color: transparent;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding: 0;
+  outline: none;
+  transition: border-color 0.3s; }
+  .slick-prev.slick-disabled:before,
+  .slick-next.slick-disabled:before {
+    opacity: 0.25; }
+  .slick-prev span,
+  .slick-next span {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: 35px;
+    height: 13px;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%); }
+  .slick-prev:before,
+  .slick-next:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 76px;
+    height: 76px;
+    opacity: 0;
+    border-radius: 40px;
+    background-color: rgba(12, 27, 71, 0.5);
+    -webkit-transform: translateY(-50%) translateX(-50%) scale(0.8);
+    -ms-transform: translateY(-50%) translateX(-50%) scale(0.8);
+    transform: translateY(-50%) translateX(-50%) scale(0.8);
+    transition: all 0.2s; }
+  .slick-prev:hover,
+  .slick-next:hover {
+    border-color: transparent; }
+    .slick-prev:hover:before,
+    .slick-next:hover:before {
+      opacity: 1;
+      -webkit-transform: translateY(-50%) translateX(-50%) scale(1);
+      -ms-transform: translateY(-50%) translateX(-50%) scale(1);
+      transform: translateY(-50%) translateX(-50%) scale(1); }
+
+.slick-prev {
+  left: 16%;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%); }
+  [dir="rtl"] .slick-prev {
+    left: auto;
+    right: -25px; }
+  [dir="rtl"] .slick-prev:before {
+    content: ""; }
+
+.slick-next {
+  right: 16%;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%); }
+  [dir="rtl"] .slick-next {
+    left: -25px;
+    right: auto; }
+  [dir="rtl"] .slick-next:before {
+    content: ""; }
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px; }
+
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%; }
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer; }
+    .slick-dots li button {
+      border: 0;
+      background: transparent;
+      display: block;
+      height: 20px;
+      width: 20px;
+      outline: none;
+      line-height: 0px;
+      font-size: 0px;
+      color: transparent;
+      padding: 5px;
+      cursor: pointer; }
+      .slick-dots li button:hover, .slick-dots li button:focus {
+        outline: none; }
+        .slick-dots li button:hover:before, .slick-dots li button:focus:before {
+          opacity: 1; }
+      .slick-dots li button:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "•";
+        width: 20px;
+        height: 20px;
+        font-family: "slick";
+        font-size: 6px;
+        line-height: 20px;
+        text-align: center;
+        color: black;
+        opacity: 0.25;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+    .slick-dots li.slick-active button:before {
+      color: black;
+      opacity: 0.75; }
+
+.slick-next:before {
+  content: url(../../img/arrow-right.png);
+  background: none;
+  opacity: 1; }
+  .slick-next:before:hover, .slick-next:before:focus {
+    opacity: 1; }
+
+.slick-prev:before {
+  content: url(../../img/arrow-left.png);
+  opacity: 1;
+  background: none; }
+  .slick-prev:before:hover, .slick-prev:before:focus {
+    opacity: 1; }
+
+header {
+  background: #171717;
+  font-family: FuturaPTBold, "Arial", "Sans-serif"; }
+  header .header-top {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1080px;
+    width: 100%;
+    margin: auto;
+    height: 100px;
+    -webkit-box-pack: justify;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    header .header-top .header-left {
+      padding-left: 40px; }
+      header .header-top .header-left ul {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex; }
+        header .header-top .header-left ul li {
+          margin-right: 40px; }
+          header .header-top .header-left ul li a {
+            font-family: FuturaPTBold, "Arial", "Sans-serif";
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 14px; }
+    header .header-top .header-central a img {
+      width: 230px; }
+    header .header-top .header-right {
+      padding-right: 40px; }
+      header .header-top .header-right ul {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex; }
+        header .header-top .header-right ul li {
+          margin-left: 40px; }
+          header .header-top .header-right ul li a {
+            font-family: FuturaPTBold, "Arial", "Sans-serif";
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 14px; }
+  header .header-bottom {
+    border-top: 1px solid #272727;
+    height: 50px; }
+    header .header-bottom ul {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      max-width: 1080px;
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      -webkit-box-align: center;
+         -moz-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+         -moz-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      header .header-bottom ul li {
+        margin-right: 20px; }
+        header .header-bottom ul li.red-promos a {
+          color: #f72d2d; }
+        header .header-bottom ul li a {
+          font-family: FuturaPTBold, "Arial", "Sans-serif";
+          color: #fff;
+          text-transform: uppercase;
+          text-decoration: none;
+          font-size: 14px; }
+
+.contact-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  .contact-container .contact-bloc_1 {
+    position: relative;
+    background: url(../../img/contact.jpg) no-repeat fixed;
+    width: 35%;
+    height: 100vh;
+    padding: 70px 0px; }
+  .contact-container .contact-bloc_2 {
+    position: relative;
+    width: 65%;
+    height: 100vh;
+    background: #f3f3f3;
+    -webkit-box-pack: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 70px 0; }
+  .contact-container .fields {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 30px 0; }
+  .contact-container .field {
+    width: 100%; }
+  .contact-container .textarea {
+    margin-top: 30px; }
+  .contact-container .coordonnees {
+    padding: 50px 0; }
+  .contact-container .select {
+    padding-bottom: 15px; }
+  .contact-container .name-email input {
+    max-width: 310px; }
+  .contact-container form {
+    width: 100%;
+    max-width: 700px;
+    padding: 0 50px; }
+  .contact-container span {
+    font-size: 12px;
+    display: block;
+    font-family: FuturaPTBook, "Arial", "Sans-serif"; }
+  .contact-container select {
+    -webkit-appearance: none;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #b4b4b4;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    outline: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    background: transparent url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right center;
+    background-size: 12px; }
+  .contact-container .option {
+    font-size: 10px; }
+  .contact-container optgroup {
+    font-size: 12px; }
+  .contact-container h1 {
+    font-size: 45pt;
+    font-family: FuturaPTBold, "Arial", "Sans-serif";
+    text-transform: uppercase; }
+  .contact-container label {
+    display: block;
+    font-family: FuturaPTBold, "Arial", "Sans-serif";
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-bottom: 10px; }
+  .contact-container p {
+    font-size: 16px;
+    font-family: FuturaPTBook, "Arial", "Sans-serif"; }
+  .contact-container input {
+    border: none;
+    background: none;
+    border-bottom: 2px solid #b4b4b4;
+    width: 100%;
+    outline: none;
+    padding-bottom: 10px; }
+  .contact-container input[type="file"] {
+    background: transparent url(https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/add-128.png) no-repeat right center;
+    background-size: 12px;
+    max-width: 250px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    position: relative; }
+    .contact-container input[type="file"]:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 82px;
+      height: 18px;
+      background: #f3f3f3; }
+  .contact-container textarea {
+    border: none;
+    background: none;
+    border-bottom: 2px solid #b4b4b4;
+    width: 100%;
+    outline: none; }
+
+.sav-container {
+  background: #dadada; }
+  .sav-container .sav-content {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+       -moz-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    text-align: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .sav-container .sav-content .items {
+      margin: 30px 0; }
+      .sav-container .sav-content .items h3 {
+        font-family: FuturaPTBold, "Arial", "Sans-serif";
+        text-transform: uppercase;
+        padding: 10px 0;
+        font-size: 13px; }
+      .sav-container .sav-content .items p {
+        font-size: 13px;
+        font-family: FuturaPTBook, "Arial", "Sans-serif"; }
+      .sav-container .sav-content .items img {
+        width: 20px; }
+
+.section-newsletter {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .section-newsletter .news-bloc_1 {
+    padding: 25px; }
+    .section-newsletter .news-bloc_1 p {
+      font-family: FuturaPTBold, "Arial", "Sans-serif";
+      text-transform: uppercase;
+      width: 100%;
+      max-width: 280px;
+      font-size: 23px;
+      line-height: 1.1; }
+  .section-newsletter .news-bloc_2 {
+    width: 100%;
+    max-width: 350px;
+    padding: 25px; }
+    .section-newsletter .news-bloc_2 label {
+      display: block;
+      font-family: FuturaPTBold, "Arial", "Sans-serif";
+      text-transform: uppercase; }
+    .section-newsletter .news-bloc_2 .field {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .section-newsletter .news-bloc_2 button {
+      background: #f72d2d;
+      padding: 15px 20px;
+      -webkit-transform: skew(-10deg);
+          -ms-transform: skew(-10deg);
+              transform: skew(-10deg);
+      position: relative;
+      display: table;
+      transition: background 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      border: none;
+      color: white; }
+    .section-newsletter .news-bloc_2 input {
+      border: none;
+      background: none;
+      border-bottom: 2px solid #b4b4b4;
+      outline: none;
+      padding: 10px 0 5px;
+      width: 100%; }
+
+@media screen and (max-width: 768px) {
+  .contact-container .contact-bloc_1 {
+    display: none; }
+  .contact-container .contact-bloc_2 {
+    width: 100%; }
+  .contact-container h1 {
+    text-align: center; } }
+
+footer {
+  background: black;
+  color: white;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+     -moz-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 50px 0; }
+  footer .items {
+    padding: 30px 0; }
+    footer .items:nth-child(1) .span {
+      padding: 15px 0 50px;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex; }
+    footer .items:nth-child(1) img:first-child {
+      width: 100%;
+      max-width: 200px; }
+  footer span {
+    font-family: FuturaPTBold, "Arial", "Sans-serif"; }
+  footer h3 {
+    font-family: FuturaPTBold, "Arial", "Sans-serif";
+    padding-bottom: 15px;
+    text-transform: uppercase; }
+  footer ul li {
+    padding: 2.5px 0; }
+    footer ul li a {
+      color: #a3a3a3;
+      text-decoration: none;
+      font-family: FuturaPTBook, "Arial", "Sans-serif"; }

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,300i,400i,500i" rel="stylesheet">
+
+    <title>JO PROJECT</title>
+
+    <link href="css/vendor/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <link href="css/dist/style.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <section class="contact-container">
+        <div class="contact-bloc_1">
+
+        </div>
+        <div class="contact-bloc_2">
+            <form action="">
+                <h1>Contact</h1>
+
+                <div class="fields coordonnees">
+                    <div class="field">
+                        <label for="">Email</label>
+                        <span>contact@nonolesgaz.net</span>
+                    </div>
+                    <div class="field">
+                        <label for="">Téléphone</label>
+                        <span>01 60 51 24 59</span>
+                    </div>
+                </div>
+
+                <div class="field select">
+                    <select id="id_contact" name="id_contact" onchange="showElemFromSelect('id_contact', 'desc_contact')">
+                        <optgroup>
+                            <option value="0" class="option">-- Choisir --</option>
+                            <option value="1" class="option">Webmaster</option>
+                            <option value="2" class="option">A propos d'une commande</option>
+                            <option value="3" class="option">Recherche d'une pièce</option>
+                            <option value="4" class="option">Pièces compétition</option>
+                            <option value="5" class="option">Proposer une occasion</option>
+                        </optgroup>
+                    </select>
+                    <div class="select-text">
+                        <p class="">Nous pouvons vous proposer des pièces exclusivement réservées à la compétition. Pour accéder à notre catalogue compéition merci de nous envoyer par mail une copie de votre licence et d'une pièce d'identité.</p>
+                    </div>
+                </div>
+
+                <div class="fields">
+                    <div class="field name-email">
+                        <label for="">Votre nom *</label>
+                        <input type="text" name="" class="nom">
+                    </div>
+                    <div class="field">
+                        <label for="">Votre email *</label>
+                        <input type="text" name="" class="email">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="">Votre fichier *</label>
+                    <input type="file" id="file" name="file" class="fichier" multiple>
+                </div>
+
+                <div class="field textarea">
+                    <label for="">Votre message *</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+
+                <button>BOUND TO FALL IN LOVE</button>
+
+            </form>
+
+
+        </div>
+    </section>
+
+    <section class="section-newsletter">
+        <div class="news-bloc_1">
+            <p>Recevez les promos et offres Nonolesgaz</p>
+        </div>
+
+        <form action="" class="news-bloc_2">
+            <label for="">Votre adresse email</label>
+
+            <div class="field">
+                <input type="text">
+                <button class="cta">></button>
+            </div>
+        </form>
+
+    </section>
+
+    <section class="sav-container">
+        <div class="sav-content">
+            <div class="items">
+                <img src="./img/icon/security@2x.png" alt="">
+                <h3>Paiement sécurisé</h3>
+                <p>Visa / Mastercard / American Express / Paypal</p>
+            </div>
+            <div class="items">
+                <img src="./img/icon/package@2x.png" alt="">
+                <h3>Retour</h3>
+                <p>Droit de retour pendant 7 jours ouvrés</p>
+            </div>
+            <div class="items">
+                <img src="./img/icon/client@2x.png" alt="">
+                <h3>Service client</h3>
+                <p>contact@nonolesgaz.net / 01 60 51 24 59</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="items">
+            <img src="./img/logo.png" alt="">
+            <div class="item span">
+                <span>Suivez-nous sur</span>
+                <span></span>
+            </div>
+            <ul class="item">
+                <li><a href=""><img src="./img/footer/icon-full.png" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="items">
+            <h3>A propos</h3>
+            <ul>
+                <li><a href="">Qui sommes-nous ?</a></li>
+                <li><a href="">Pièces compétition</a></li>
+                <li><a href="">Espace presse</a></li>
+                <li><a href="">Recrutement</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <div class="items">
+            <h3>Aide</h3>
+            <ul>
+                <li><a href="">Livraison et retours</a></li>
+                <li><a href="">Membre premium</a></li>
+                <li><a href="">Programme de fidélité</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Conditions générales de vente</a></li>
+                <li><a href="">Mentions légales</a></li>
+            </ul>
+        </div>
+        <div class="items">
+            <h3>Boutique</h3>
+            <ul>
+                <li><a href="">Mécaboîte</a></li>
+                <li><a href="">Scooter</a></li>
+                <li><a href="">Maxiscooter</a></li>
+                <li><a href="">Atelier</a></li>
+                <li><a href="">équipement pilote</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- jQuery 1.10.2
+    ================================================== -->
+    <script src="js/vendor/jquery.js"></script>
+    <!-- Necessary JS
+    ================================================== -->
+    <script src="js/vendor/slick.min.js"></script>
+    <script src="js/vendor/jquery.matchHeight.js"></script>
+    <script src="js/dist/app.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/vendor/ie10-viewport-bug-workaround.js"></script>
+
+
+</body>
+</html>
+
